@@ -15,4 +15,14 @@ CovidEase is a mobile app developed as part of the ICT Innovation Fest. It provi
 
 ## Key Features:
 
-** ```Simplified application process for efficient trainee onboarding.```
+- View Map with filtered and regularly updated Medical Service Info
+``Filters:``
+    1. Corona unit available
+    2. Corona Testing Places
+    3. No Corona unit available
+    4. Under Construction
+    5. For Corona Treatment
+    6. Under Lock down
+- Get all emergency contacts
+- Visualize overall status of the disease 
+- Keep in touch with Latest news
