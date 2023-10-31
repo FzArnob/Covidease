@@ -1,0 +1,12 @@
+package com.shaded.fasterxml.jackson.databind.jsonschema;
+
+import com.shaded.fasterxml.jackson.databind.JsonMappingException;
+import com.shaded.fasterxml.jackson.databind.JsonNode;
+import com.shaded.fasterxml.jackson.databind.SerializerProvider;
+import java.lang.reflect.Type;
+
+public interface SchemaAware {
+    JsonNode getSchema(SerializerProvider serializerProvider, Type type) throws JsonMappingException;
+
+    JsonNode getSchema(SerializerProvider serializerProvider, Type type, boolean z) throws JsonMappingException;
+}

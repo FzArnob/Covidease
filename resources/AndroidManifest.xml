@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.2107" android:installLocation="auto" android:compileSdkVersion="28" android:compileSdkVersionCodename="9" package="com.covidease.lab" platformBuildVersionCode="28" platformBuildVersionName="9">
+    <permission android:name="io.kodular.fz_arnob.CovidEaseV1_2107.permission.MAPS_RECEIVE" android:protectionLevel="signature"/>
+    <uses-permission android:name="io.kodular.fz_arnob.CovidEaseV1_2107.permission.MAPS_RECEIVE"/>
+    <uses-feature android:glEsVersion="20000" android:required="true"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-sdk android:minSdkVersion="19" android:targetSdkVersion="28"/>
+    <application android:theme="@style/AppTheme" android:label="CovidEase" android:icon="@mipmap/ic_launcher" android:name="com.google.appinventor.components.runtime.multidex.MultiDexApplication" android:debuggable="false" android:supportsRtl="false" android:usesCleartextTraffic="true" android:networkSecurityConfig="@xml/network_security_config" android:roundIcon="@mipmap/ic_launcher">
+        <activity android:theme="@style/AppTheme.NoActionBar" android:name="p004io.kodular.fz_arnob.CovidEaseV1_2107.Screen1" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <meta-data android:name="io.kodular.app.VERSION" android:value="1.4C.4-Eagle"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <activity android:theme="@style/Theme.Translucent.NoTitleBar" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false"/>
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyAU40BwIptQA4NRnvsm9pixd_3tUj5FpPk"/>
+        <provider android:name="android.support.p000v4.content.FileProvider" android:exported="false" android:authorities="com.covidease.lab.provider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_paths"/>
+        </provider>
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <meta-data android:name="Kodular_RCWTFYP-BYDNKHMWRIT-DNLATT" android:value="_38dddd58c18f8ac8651826adc687b5b5.115ba7cb57d789d07d048233d1631bf8-1591550764~jwYK7BmgZeb7wfeAilVYkXFgyT4oUADh881jyiPeB1g4zwas5jkJRwM38H7Vskps_"/>
+    </application>
+</manifest>

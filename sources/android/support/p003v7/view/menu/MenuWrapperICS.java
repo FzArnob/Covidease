@@ -1,0 +1,138 @@
+package android.support.p003v7.view.menu;
+
+import android.content.ComponentName;
+import android.content.Context;
+import android.content.Intent;
+import android.support.p000v4.internal.view.SupportMenu;
+import android.view.KeyEvent;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.SubMenu;
+
+/* renamed from: android.support.v7.view.menu.MenuWrapperICS */
+class MenuWrapperICS extends BaseMenuWrapper<SupportMenu> implements Menu {
+    /* JADX INFO: super call moved to the top of the method (can break code semantics) */
+    MenuWrapperICS(Context context, SupportMenu object) {
+        super(context, object);
+    }
+
+    public MenuItem add(CharSequence title) {
+        return getMenuItemWrapper(((SupportMenu) this.mWrappedObject).add(title));
+    }
+
+    public MenuItem add(int titleRes) {
+        return getMenuItemWrapper(((SupportMenu) this.mWrappedObject).add(titleRes));
+    }
+
+    public MenuItem add(int groupId, int itemId, int order, CharSequence title) {
+        return getMenuItemWrapper(((SupportMenu) this.mWrappedObject).add(groupId, itemId, order, title));
+    }
+
+    public MenuItem add(int groupId, int itemId, int order, int titleRes) {
+        return getMenuItemWrapper(((SupportMenu) this.mWrappedObject).add(groupId, itemId, order, titleRes));
+    }
+
+    public SubMenu addSubMenu(CharSequence title) {
+        return getSubMenuWrapper(((SupportMenu) this.mWrappedObject).addSubMenu(title));
+    }
+
+    public SubMenu addSubMenu(int titleRes) {
+        return getSubMenuWrapper(((SupportMenu) this.mWrappedObject).addSubMenu(titleRes));
+    }
+
+    public SubMenu addSubMenu(int groupId, int itemId, int order, CharSequence title) {
+        return getSubMenuWrapper(((SupportMenu) this.mWrappedObject).addSubMenu(groupId, itemId, order, title));
+    }
+
+    public SubMenu addSubMenu(int groupId, int itemId, int order, int titleRes) {
+        return getSubMenuWrapper(((SupportMenu) this.mWrappedObject).addSubMenu(groupId, itemId, order, titleRes));
+    }
+
+    public int addIntentOptions(int i, int i2, int i3, ComponentName componentName, Intent[] intentArr, Intent intent, int i4, MenuItem[] menuItemArr) {
+        int groupId = i;
+        int itemId = i2;
+        int order = i3;
+        ComponentName caller = componentName;
+        Intent[] specifics = intentArr;
+        Intent intent2 = intent;
+        int flags = i4;
+        MenuItem[] outSpecificItems = menuItemArr;
+        MenuItem[] items = null;
+        if (outSpecificItems != null) {
+            items = new MenuItem[outSpecificItems.length];
+        }
+        int result = ((SupportMenu) this.mWrappedObject).addIntentOptions(groupId, itemId, order, caller, specifics, intent2, flags, items);
+        if (items != null) {
+            int z = items.length;
+            for (int i5 = 0; i5 < z; i5++) {
+                outSpecificItems[i5] = getMenuItemWrapper(items[i5]);
+            }
+        }
+        return result;
+    }
+
+    public void removeItem(int i) {
+        int id = i;
+        internalRemoveItem(id);
+        ((SupportMenu) this.mWrappedObject).removeItem(id);
+    }
+
+    public void removeGroup(int i) {
+        int groupId = i;
+        internalRemoveGroup(groupId);
+        ((SupportMenu) this.mWrappedObject).removeGroup(groupId);
+    }
+
+    public void clear() {
+        internalClear();
+        ((SupportMenu) this.mWrappedObject).clear();
+    }
+
+    public void setGroupCheckable(int group, boolean checkable, boolean exclusive) {
+        ((SupportMenu) this.mWrappedObject).setGroupCheckable(group, checkable, exclusive);
+    }
+
+    public void setGroupVisible(int group, boolean visible) {
+        ((SupportMenu) this.mWrappedObject).setGroupVisible(group, visible);
+    }
+
+    public void setGroupEnabled(int group, boolean enabled) {
+        ((SupportMenu) this.mWrappedObject).setGroupEnabled(group, enabled);
+    }
+
+    public boolean hasVisibleItems() {
+        return ((SupportMenu) this.mWrappedObject).hasVisibleItems();
+    }
+
+    public MenuItem findItem(int id) {
+        return getMenuItemWrapper(((SupportMenu) this.mWrappedObject).findItem(id));
+    }
+
+    public int size() {
+        return ((SupportMenu) this.mWrappedObject).size();
+    }
+
+    public MenuItem getItem(int index) {
+        return getMenuItemWrapper(((SupportMenu) this.mWrappedObject).getItem(index));
+    }
+
+    public void close() {
+        ((SupportMenu) this.mWrappedObject).close();
+    }
+
+    public boolean performShortcut(int keyCode, KeyEvent event, int flags) {
+        return ((SupportMenu) this.mWrappedObject).performShortcut(keyCode, event, flags);
+    }
+
+    public boolean isShortcutKey(int keyCode, KeyEvent event) {
+        return ((SupportMenu) this.mWrappedObject).isShortcutKey(keyCode, event);
+    }
+
+    public boolean performIdentifierAction(int id, int flags) {
+        return ((SupportMenu) this.mWrappedObject).performIdentifierAction(id, flags);
+    }
+
+    public void setQwertyMode(boolean isQwerty) {
+        ((SupportMenu) this.mWrappedObject).setQwertyMode(isQwerty);
+    }
+}
