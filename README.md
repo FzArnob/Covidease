@@ -16,6 +16,7 @@ CovidEase is a mobile app developed as part of the ICT Innovation Fest. It provi
 ## Key Features:
 
 - View Map with filtered and regularly updated Medical Service Info
+
 ``Filters:``
     1. Corona unit available
     2. Corona Testing Places
@@ -26,3 +27,5 @@ CovidEase is a mobile app developed as part of the ICT Innovation Fest. It provi
 - Get all emergency contacts
 - Visualize overall status of the disease 
 - Keep in touch with Latest news
+
+[covidease.webm](https://github.com/FzArnob/Covidease/assets/67764367/e0990446-62ce-48a8-9a72-f67018342fa0)
